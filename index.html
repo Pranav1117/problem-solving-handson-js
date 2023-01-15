@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS Handson 1</h1>
+<hr size="5px" color="brown">
+
+      <ol>
+        <li><h2>Find the Smaller Angle</li></h2>
+        <h4>Answer:</h4>
+        <pre>
+var Minimal_Angle = (h, m) => 
+{
+    const minuteAngle = m/ 60 * 360;
+    const hourAngle = (h% 12 + m / 60 ) * 360 / 12;
+    let ans = Math.abs(minuteAngle - hourAngle);
+    return ans;
+       
+};
+</pre>
+   <hr />  
+   
+
+
+   <li><h2>Check whether the year is Leap year or not.
+</li></h2>
+        <h4>Answer:</h4>
+        <pre>
+var Check_Leap = (year) => 
+{
+  var c = 0;
+ if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+        c='Leap Year';
+    } else {
+        c='Non Leap Year';
+    }
+return c;
+};
+</pre>
+   <hr /> 
+
+
+
+   <li><h2>Perfect Number Check.</li></h2>
+        <h4>Answer:</h4>
+        <pre>
+var Perfect_Check = (N) => 
+{
+  var c=0;
+var temp = 0;
+for(var i=1;i&lt;=N/2;i++)
+{ 
+  if(N%i === 0)
+  { 
+    temp += i;
+  }
+}
+  if(temp === N && temp !== 0)
+  { 
+    c ='YES';
+  } 
+    else 
+    { 
+      c ='NO';
+    } 
+  
+  return c;
+};
+</pre>
+   <hr /> 
+
+
+
+   <li><h2>Find the first digit of a 4 digit number</li></h2>
+        <h4>Answer:</h4>
+        <pre>
+var Reverse_Number = (N) => 
+{
+  let result = 0;
+
+while(N>0){
+    
+    rightmost = N%10;
+    
+    result = result*10 + rightmost;
+    
+    
+    N = Math.floor(N/10);
+}
+return result;
+};
+ 
+</pre>
+   <hr /> 
+
+
+
+   <li><h2>Substring Check.</li></h2>
+        <h4>Answer:</h4>
+        <pre>
+var Substring_Check = (S1, S2) => 
+{
+  var c= 0;
+  if(S1.includes(S2))
+  {
+    c ='YES'
+  }
+  else{
+    c ='NO'
+  }
+     return c;
+};
+</pre>
+   <hr />  
+
+
+
+   
+      </ol>
+    
+    
+  </body>
+</html>
